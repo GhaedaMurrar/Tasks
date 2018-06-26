@@ -2,7 +2,10 @@
 Created on Jun 25, 2018
 
 @author: G. J. Murrar
+
 '''
+
+# build a function that receive a positive number n and return the range (0, 0.5, 1, 1.5, ... n).
 
 def func_(n):
     s = 0
