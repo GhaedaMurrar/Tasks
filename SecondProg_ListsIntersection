@@ -1,0 +1,47 @@
+'''
+Created on Jun 25, 2018
+
+@author: G. J. Murrar
+
+'''
+# build a function that receive a two lists A and B and return the intersection elements.
+
+def func_(list1 , size , list2):
+    intersection_list =[]
+    s = 0
+    while  s < size:
+        if list1[s] in list2 :
+            intersection_list.append(list1[s])   
+        s += 1     
+    return intersection_list
+
+
+def main():
+    A = []
+    B = []
+    intersection = []
+    a_size = input("Please , Enter the number of A elements : ")
+    while a_size != 0:
+        n = input ("Enter an element : ")
+        A.append(n)
+        a_size-=1
+    
+    b_size = input("Please , Enter the number of B elements : ")
+    while b_size != 0:
+        n = input ("Enter an element : ")
+        B.append(n)
+        b_size-=1
+    
+    temp = True if len(A) > len(B)  else False 
+    if temp == True :
+        intersection = func_(A, len(A) , B)
+    else :
+        intersection = func_(B , len(B) , A)
+        
+    print("The intersection list is : ")
+    for element in intersection:
+        print(element)
+    
+    
+if __name__ == "__main__":
+    main()   
