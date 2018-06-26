@@ -1,0 +1,25 @@
+'''
+Created on Jun 25, 2018
+
+@author: G. J. Murrar
+
+'''
+
+# build a function that receive a string my_string and returns all the words in the string starts with "ex".
+
+import re
+
+def func_(my_string):
+    pattern = re.compile(r'\bex\w+')
+    matches = pattern.finditer(my_string)
+    return matches
+
+def main():
+    test = raw_input("Please , Enter a string : ")
+    matches = func_(test)
+    print("Matches : ")
+    for match  in matches :
+        print match.start() , match.group()
+    
+if __name__ == "__main__":
+    main()   
