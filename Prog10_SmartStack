@@ -6,7 +6,7 @@ Created on Jun 26, 2018
 # build an Smart Stack with the same functions as Stack with an extra method push list of n arguments, and pop the last n argument.
 
 '''
-implement a Smart Stack using list 
+implement a Smart Stack using list  -- it would be more efficient if SmartStack Inherits form Stack class
 ''' 
 
 class SmartStack:
