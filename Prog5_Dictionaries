@@ -1,0 +1,49 @@
+'''
+Created on Jun 26, 2018
+
+@author: G. J. Murrar
+
+'''
+# build a function that receive a two dictionaries A and B and both dictionaries has the same content.
+
+def func_(dic1 , dic2):
+    
+    temp = False 
+    for key in dic1.keys() :
+        if key in dic2.keys():
+            if dic1[key] != dic2[key]:
+                temp = False
+            else:
+                temp = True
+            
+    return temp 
+                        
+def main():
+    A = {}
+    B = {}
+    A_size = input("Enter the size of A dictionary : ")
+    print("Please , Enter the elements(key,value) of Dictionary A : ")
+    while A_size != 0:
+        key = raw_input("Enter a Key : ")
+        value = raw_input("Enter a value : ")
+        A[key] = value 
+        A_size -= 1
+    
+    B_size = input("Enter the size of B dictionary : ")
+    print("Please , Enter the elements(key,value) of Dictionary B : ")
+    while B_size != 0:
+        key = raw_input("Enter a Key : ")
+        value = raw_input("Enter a value : ")
+        B[key] = value 
+        B_size -= 1
+    
+    if len(A) ==  len(B) :
+        if func_(A, B) == True :
+            print("A and B have the same content .")
+        else:
+            print("A and B don't have the same content .")
+    else:
+        print("A and B don't have the same content .")
+
+if __name__ == "__main__":
+    main()   
