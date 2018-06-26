@@ -1,0 +1,26 @@
+'''
+Created on Jun 25, 2018
+
+@author: G. J. Murrar
+'''
+
+def func_(n):
+    s = 0
+    test =[]
+    while s <= n:
+        test.append(s)
+        s+=0.5
+    return test 
+
+
+def main():
+    num = input("Enter a number : ")
+    for n in func_(num):
+        print (n)
+    
+    
+if __name__ == "__main__":
+    main()
+
+         
+        
