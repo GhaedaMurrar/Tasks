@@ -4,6 +4,7 @@ Created on Jun 25, 2018
 @author: G. J. Murrar
 
 '''
+
 # build a function that receive a string my_string and returns dictionary of the char to number of occurences in the string.
 
 def func_(my_string):
