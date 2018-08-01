@@ -3,19 +3,17 @@ Created on Jun 25, 2018
 
 @author: G. J. Murrar
 
+build a function that receive a string my_string and returns set of the chars in the string.
+
 '''
-# build a function that receive a string my_string and returns set of the chars in the string.
-
 from sets import Set
+import argparse
 
-def func_(my_string):
-    s = Set(my_string)
-    return s 
+func_ = lambda my_string : Set(my_string)
 
-def main():
-    test = raw_input("Please , Enter a string : ")
-    for c in func_(test):
-        print(c)
-    
 if __name__ == "__main__":
-    main()   
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-t" ,"--test" ,dest="test", type = str , help = "Enter a String ")
+    args = parser.parse_args()
+    test = args.test 
+    print func_(str(test))
