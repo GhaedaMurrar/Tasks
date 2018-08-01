@@ -2,26 +2,21 @@
 Created on Jun 25, 2018
 
 @author: G. J. Murrar
-
+build a function that receive a string my_string and returns dictionary of the char to number of occurences in the string.
 '''
-# build a function that receive a string my_string and returns dictionary of the char to number of occurences in the string.
+import argparse
 
 def func_(my_string):
-    s = 0 
     dic = {}
     for ch in my_string :
-        if ch in dic.iterkeys() :
-            dic[ch] += 1 
-        else :
-            dic[ch] = 1
-        s += 1
+        if ch in dic.iterkeys() : dic[ch] += 1 
+        else : dic[ch] = 1
     return dic
-
-def main():
-    test = raw_input("Please , Enter a string : ")
-    dic = func_(test)
-    for c  in dic.iterkeys() :
-        print c , 'occure ' , dic[c] , 'times'
     
 if __name__ == "__main__":
-    main()   
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-s" ,"--string" ,dest="test" , help = "Enter a String ")
+    test = parser.parse_args().test
+    dic = func_(test)
+    for c  in dic.iterkeys() :
+        print c , 'occur ' , dic[c] , 'times'   
