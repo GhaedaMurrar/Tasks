@@ -3,23 +3,17 @@ Created on Jun 25, 2018
 
 @author: G. J. Murrar
 
+build a function that receive a string my_string and returns all the words in the string starts with "ex".
+
 '''
-
-# build a function that receive a string my_string and returns all the words in the string starts with "ex".
-
 import re
+import argparse
 
-def func_(my_string):
-    pattern = re.compile(r'\bex\w+')
-    matches = pattern.finditer(my_string)
-    return matches
+match = lambda test : re.findall(r'\bex\w*' , str(test))
 
-def main():
-    test = raw_input("Please , Enter a string : ")
-    matches = func_(test)
-    print("Matches : ")
-    for match  in matches :
-        print match.start() , match.group()
-    
 if __name__ == "__main__":
-    main()   
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-t" ,"--test" ,nargs = "*" ,dest="test", type = str , help = "Enter a String ")
+    args = parser.parse_args()
+    test = args.test
+    print match(test)
