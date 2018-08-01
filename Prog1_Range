@@ -3,27 +3,16 @@ Created on Jun 25, 2018
 
 @author: G. J. Murrar
 
+build a function that receive a positive number n and return the range (0, 0.5, 1, 1.5, ... n).
 '''
-
-# build a function that receive a positive number n and return the range (0, 0.5, 1, 1.5, ... n).
-
-def func_(n):
-    s = 0
-    test =[]
-    while s <= n:
-        test.append(s)
-        s+=0.5
-    return test 
-
-
-def main():
-    num = input("Enter a number : ")
-    for n in func_(num):
-        print (n)
-    
-    
+import argparse
+func_ = lambda n : [i/10.0 for i in xrange( int(0.0*10),int((n+0.5)*10),int(0.5*10))]
+ 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-t" ,"--test" ,dest="test" , help = "Enter a Number ")
+    test = parser.parse_args().test
+    for n in func_(int(test)): print (n)
 
          
         
