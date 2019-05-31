@@ -5,6 +5,7 @@ Created on Jun 26, 2018
 '''
 # build a Stack with the following functions: isEmpty, push, pop, peek, size.
 
+
 '''
 implement a Stack using list 
 ''' 
