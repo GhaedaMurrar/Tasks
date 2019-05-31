@@ -7,6 +7,7 @@ Created on Jun 26, 2018
 implement a Smart Stack using list  -- it would be more efficient if SmartStack Inherits form Stack class
 ''' 
 
+
 class SmartStack:
     def __init__(self):
         self.items = []
